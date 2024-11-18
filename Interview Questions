@@ -1,0 +1,28 @@
+
+
+public class Keypad {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	int[] pad= {1,2,3,4,5,6,7,8,9,0};
+	int[] num= {2,1,0};
+	int c=0,val1=0,val2=0,travesal=0 ,count=0;
+	for(int i=0;i<num.length;i++) {
+		for(int j=0;j<pad.length;j++) {
+			if(num[i]==pad[j]) {
+				if(c<j) {
+					val1=j;
+					val2=c;
+				}else {
+					val1=c;
+					val2=j;
+				}
+				travesal=val1-val2;
+				c=j;
+				count=count+travesal;
+			}
+		}
+	}System.out.println(count);
+}
+}
